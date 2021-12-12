@@ -17,7 +17,7 @@ def f_period_generator(hour):
         return "Night"
     
 
-r = requests.get('https://www.metoffice.gov.uk/weather/forecast/u10j124jp#?nearestTo=E16%20(United%20Kingdom)')
+r = requests.get('https://www.metoffice.gov.uk/weather/forecast/u10j124jp')
 
 soup = BeautifulSoup(r.content, "html.parser")
 tmrw_dataset = soup.find_all("table")[1] #tmrw's table 
